@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RuPaul's Drag Race Simulator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>RuPaul's Drag Race Simulator</h1>
+        <p>Build your cast, run episodes, and crown your winner.</p>
+      </header>
+
+      <section class="panel">
+        <h2>Season Setup</h2>
+        <div class="setup-grid">
+          <label for="queenInput">Add queen</label>
+          <input id="queenInput" type="text" placeholder="e.g. Sasha Velour" />
+          <button id="addQueenBtn">Add</button>
+        </div>
+        <div class="quick-add">
+          <button id="fillSampleBtn" class="secondary">Use sample cast</button>
+          <button id="clearBtn" class="secondary danger">Clear cast</button>
+        </div>
+        <ul id="queenList"></ul>
+      </section>
+
+      <section class="panel controls">
+        <button id="startBtn">Start Season</button>
+        <button id="nextEpisodeBtn" disabled>Run Next Episode</button>
+      </section>
+
+      <section class="panel">
+        <h2>Episode Log</h2>
+        <p id="seasonState">Add at least 6 queens to begin.</p>
+        <div id="episodeLog" class="log"></div>
+      </section>
+    </main>
+
+    <template id="episodeTemplate">
+      <article class="episode-entry">
+        <h3></h3>
+        <ul></ul>
+      </article>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
